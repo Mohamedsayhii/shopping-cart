@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Icon from '@mdi/react';
 import { mdiCart } from '@mdi/js';
+import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
 	color: white;
@@ -38,23 +39,23 @@ const Nav = styled.nav`
 const Navbar = () => {
 	return (
 		<Nav data-testid='navbar'>
-			<a href=''>
+			<Link to=''>
 				<h1 className='title'>GSRN</h1>
-			</a>
+			</Link>
 			<div className='categories'>
-				<a href=''>
+				<Link to=''>
 					<h2>Men</h2>
-				</a>
-				<a href=''>
+				</Link>
+				<Link to=''>
 					<h2>Women</h2>
-				</a>
-				<a href=''>
+				</Link>
+				<Link to=''>
 					<h2>Jewelry</h2>
-				</a>
+				</Link>
 				<div className='cart'>
-					<a href=''>
+					<Link to=''>
 						<Icon path={mdiCart} size={1.5} />
-					</a>
+					</Link>
 				</div>
 			</div>
 		</Nav>
