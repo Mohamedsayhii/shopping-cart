@@ -39,7 +39,7 @@ const Nav = styled.nav`
 const Navbar = () => {
 	return (
 		<Nav data-testid='navbar'>
-			<Link to=''>
+			<Link to='/'>
 				<h1 className='title'>GSRN</h1>
 			</Link>
 			<div className='categories'>
