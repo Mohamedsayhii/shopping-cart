@@ -24,6 +24,19 @@ const Nav = styled.nav`
 
 		.cart {
 			padding-top: 0.7rem;
+			position: relative;
+
+			.count {
+				height: 17px;
+				width: 17px;
+				text-align: center;
+				top: 0%;
+				left: 50%;
+				position: absolute;
+				color: green;
+				background-color: white;
+				border-radius: 50%;
+			}
 		}
 	}
 
@@ -55,6 +68,7 @@ const Navbar = () => {
 				<div className='cart'>
 					<Link to=''>
 						<Icon path={mdiCart} size={1.5} />
+						<h3 className='count'>1</h3>
 					</Link>
 				</div>
 			</div>
