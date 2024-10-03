@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 
 const Categories = styled.div`
 	background-image: url('/Casa.jpg');
-
 	display: grid;
 	height: 90vh;
 	width: 100%;
@@ -19,7 +18,7 @@ const Categories = styled.div`
 		background-color: green;
 
 		img {
-			max-width: 350px;
+			width: 350px;
 			height: 500px;
 			object-fit: fill;
 		}
@@ -27,6 +26,36 @@ const Categories = styled.div`
 		h1 {
 			color: white;
 			padding: 1rem 0rem;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+		.category {
+			img {
+				width: 260px;
+				height: 400px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.category {
+			img {
+				width: 190px;
+				height: 300px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+
+		.category {
+			img {
+				width: 200px;
+				height: 300px;
+			}
 		}
 	}
 `;

@@ -5,7 +5,6 @@ const Wrapper = styled.main`
 	background-position: top center;
 	background-size: cover;
 	height: 92vh;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
