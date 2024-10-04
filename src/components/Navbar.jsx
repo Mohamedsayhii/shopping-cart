@@ -44,7 +44,7 @@ const Nav = styled.nav`
 		padding: 1rem;
 
 		.categories {
-			gap: 1rem;
+			gap: 0.7rem;
 		}
 	}
 `;
@@ -68,7 +68,7 @@ const Navbar = () => {
 				<div className='cart'>
 					<Link to=''>
 						<Icon path={mdiCart} size={1.5} />
-						<h3 className='count'>1</h3>
+						<h3 className='count'>0</h3>
 					</Link>
 				</div>
 			</div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
 const Wrapper = styled.main`
 	background-image: url('/background-image.jpg');
 	background-position: top center;
@@ -33,7 +34,7 @@ const Main = () => {
 	return (
 		<Wrapper data-testid='main'>
 			<h1>The Impossible Possibilities</h1>
-			<Link to='/shop'>
+			<Link to='shop'>
 				<button>SHOP NOW</button>
 			</Link>
 		</Wrapper>
