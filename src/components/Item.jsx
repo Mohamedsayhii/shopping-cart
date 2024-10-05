@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -30,15 +31,25 @@ const Wrapper = styled.div`
 `;
 
 function Item({ imageSource, title, price }) {
+	const [count, setCount] = useState(1);
+
+	const incrementCount = () => {
+		setCount((prevCount) => prevCount + 1);
+	};
+
+	const decrementCount = () => {
+		if (count > 1) setCount((prevCount) => prevCount - 1);
+	};
+
 	return (
 		<Wrapper>
 			<img src={imageSource} alt='' />
 			<h2>{title}</h2>
 			<h2>{price}$</h2>
 			<div className='count'>
-				<button>-</button>
-				<h2>0</h2>
-				<button>+</button>
+				<button onClick={decrementCount}>-</button>
+				<h2>{count}</h2>
+				<button onClick={incrementCount}>+</button>
 			</div>
 			<button>Add to Cart</button>
 		</Wrapper>

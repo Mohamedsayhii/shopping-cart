@@ -66,7 +66,7 @@ const Navbar = () => {
 					<h2>Jewelry</h2>
 				</Link>
 				<div className='cart'>
-					<Link to=''>
+					<Link to='cart'>
 						<Icon path={mdiCart} size={1.5} />
 						<h3 className='count'>0</h3>
 					</Link>

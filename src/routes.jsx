@@ -4,6 +4,7 @@ import Shop from './components/Shop';
 import Categories from './components/Categories';
 import Women from './components/Women';
 import Jewelry from './components/Jewelry';
+import Cart from './components/Cart';
 
 const routes = [
 	{
@@ -19,6 +20,10 @@ const routes = [
 			{ path: 'women', element: <Women /> },
 			{ path: 'jewelry', element: <Jewelry /> },
 		],
+	},
+	{
+		path: 'cart',
+		element: <Cart />,
 	},
 ];
 
