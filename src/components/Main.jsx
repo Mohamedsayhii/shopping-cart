@@ -34,7 +34,7 @@ const Main = () => {
 	return (
 		<Wrapper data-testid='main'>
 			<h1>The Impossible Possibilities</h1>
-			<Link to='shop'>
+			<Link to='/shop'>
 				<button>SHOP NOW</button>
 			</Link>
 		</Wrapper>
