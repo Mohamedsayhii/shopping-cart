@@ -56,17 +56,17 @@ const Navbar = () => {
 				<h1 className='title'>GSRN</h1>
 			</Link>
 			<div className='categories'>
-				<Link to=''>
+				<Link to='/shop/men'>
 					<h2>Men</h2>
 				</Link>
-				<Link to=''>
+				<Link to='/shop/women'>
 					<h2>Women</h2>
 				</Link>
-				<Link to=''>
+				<Link to='/shop/jewelry'>
 					<h2>Jewelry</h2>
 				</Link>
 				<div className='cart'>
-					<Link to='cart'>
+					<Link to='/cart'>
 						<Icon path={mdiCart} size={1.5} />
 						<h3 className='count'>0</h3>
 					</Link>
