@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Icon from '@mdi/react';
 import { mdiCart } from '@mdi/js';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Nav = styled.nav`
 	color: white;
@@ -49,7 +50,7 @@ const Nav = styled.nav`
 	}
 `;
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
 	return (
 		<Nav data-testid='navbar'>
 			<Link to='/'>
@@ -68,12 +69,16 @@ const Navbar = () => {
 				<div className='cart'>
 					<Link to='/cart'>
 						<Icon path={mdiCart} size={1.5} />
-						<h3 className='count'>0</h3>
+						<h3 className='count'>{cartCount ? cartCount : 0}</h3>
 					</Link>
 				</div>
 			</div>
 		</Nav>
 	);
+};
+
+Navbar.propTypes = {
+	cartCount: PropTypes.number,
 };
 
 export default Navbar;

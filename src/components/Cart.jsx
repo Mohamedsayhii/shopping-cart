@@ -29,14 +29,24 @@ const Wrapper = styled.div`
 function Cart() {
 	const [items, setItems] = useState([]);
 
+	function addToCart(item) {
+		setItems((items) => items.push(item));
+	}
+
 	return (
 		<>
 			<Navbar />
 			<Wrapper>
-				<h1>YOUR CART IS EMPTY</h1>
-				<Link to='/shop'>
-					<button>SHOP NOW</button>
-				</Link>
+				{items.length === 0 ? (
+					<>
+						<h1>YOUR CART IS EMPTY</h1>
+						<Link to='/shop'>
+							<button>SHOP NOW</button>
+						</Link>
+					</>
+				) : (
+					<h1>YOUR CART IS NOT EMPTY</h1>
+				)}
 			</Wrapper>
 			<Footer />
 		</>
