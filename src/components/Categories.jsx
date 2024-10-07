@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 	background-image: url('/Casa.jpg');
 	display: grid;
-	height: 90vh;
 	width: 100%;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1rem;
+	height: 92vh;
 	padding: 2rem;
 	place-items: center;
 
@@ -48,6 +48,7 @@ const Wrapper = styled.div`
 	}
 
 	@media screen and (max-width: 600px) {
+		height: auto;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
 

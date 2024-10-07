@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-function Item({ imageSource, title, price }) {
+function Item({ id, imageSource, title, price }) {
 	const [count, setCount] = useState(1);
 	const { addToCart } = useCart();
 
@@ -53,12 +53,17 @@ function Item({ imageSource, title, price }) {
 				<h2 data-testid='itemCount'>{count}</h2>
 				<button onClick={incrementCount}>+</button>
 			</div>
-			<button onClick={addToCart}>Add to Cart</button>
+			<button
+				onClick={() => addToCart(id, imageSource, title, price, count)}
+			>
+				Add to Cart
+			</button>
 		</Wrapper>
 	);
 }
 
 Item.propTypes = {
+	id: PropTypes.number.isRequired,
 	imageSource: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	price: PropTypes.number.isRequired,

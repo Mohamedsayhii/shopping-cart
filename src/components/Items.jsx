@@ -48,6 +48,7 @@ function Items({ title, dataToFetch }) {
 				{data.map((item) => (
 					<Item
 						key={item.id}
+						id={item.id}
 						imageSource={item.image}
 						title={item.title}
 						price={item.price}
