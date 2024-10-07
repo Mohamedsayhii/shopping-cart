@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { createContext, useState, useContext } from 'react';
 
-const CartContext = createContext();
+const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
-	const [cartItems, setCartItems] = useState([1, 2, 3]);
+	const [cartItems, setCartItems] = useState([]);
 
 	function addToCart(item) {
 		setCartItems((prevItems) => [...prevItems, item]);

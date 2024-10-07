@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../contexts/CartContext';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -27,17 +27,13 @@ const Wrapper = styled.div`
 `;
 
 function Cart() {
-	const [items, setItems] = useState([]);
-
-	function addToCart(item) {
-		setItems((items) => items.push(item));
-	}
+	const { cartItems } = useCart();
 
 	return (
 		<>
 			<Navbar />
 			<Wrapper>
-				{items.length === 0 ? (
+				{cartItems.length === 0 ? (
 					<>
 						<h1>YOUR CART IS EMPTY</h1>
 						<Link to='/shop'>

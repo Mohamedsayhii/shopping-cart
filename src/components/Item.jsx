@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { useCart } from '../contexts/CartContext';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -32,6 +33,7 @@ const Wrapper = styled.div`
 
 function Item({ imageSource, title, price }) {
 	const [count, setCount] = useState(1);
+	const { addToCart } = useCart();
 
 	const incrementCount = () => {
 		setCount((prevCount) => prevCount + 1);
@@ -48,10 +50,10 @@ function Item({ imageSource, title, price }) {
 			<h2>{price}$</h2>
 			<div className='count'>
 				<button onClick={decrementCount}>-</button>
-				<h2>{count}</h2>
+				<h2 data-testid='itemCount'>{count}</h2>
 				<button onClick={incrementCount}>+</button>
 			</div>
-			<button>Add to Cart</button>
+			<button onClick={addToCart}>Add to Cart</button>
 		</Wrapper>
 	);
 }
