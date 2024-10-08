@@ -71,7 +71,7 @@ const Navbar = () => {
 				<div className='cart'>
 					<Link to='/cart'>
 						<Icon path={mdiCart} size={1.5} />
-						<h3 className='count'>
+						<h3 className='count' data-testid='items-count'>
 							{cartItems ? cartItems.length : 0}
 						</h3>
 					</Link>
